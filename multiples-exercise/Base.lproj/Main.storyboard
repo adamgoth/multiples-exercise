@@ -35,6 +35,9 @@
                                     <constraint firstAttribute="height" constant="180" id="x1i-7r-Ew0"/>
                                 </constraints>
                                 <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="hitPlayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YN6-AJ-P5K"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Multiply by what number?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mka-dN-Kbm">
                                 <rect key="frame" x="200.5" y="320" width="200" height="45"/>
@@ -48,9 +51,12 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJm-St-ZEB">
                                 <rect key="frame" x="195" y="424" width="211" height="101"/>
                                 <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="pressAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cPs-Aq-w8h"/>
+                                </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 + 20 = 40" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHn-LK-qL7">
-                                <rect key="frame" x="186.5" y="164" width="227.5" height="45.5"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Add to Start!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHn-LK-qL7">
+                                <rect key="frame" x="136.5" y="164" width="328" height="46"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="38"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -74,6 +80,13 @@
                             <constraint firstItem="mka-dN-Kbm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wTu-WK-3Xx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="aJm-St-ZEB" id="V3B-2L-AAb"/>
+                        <outlet property="multiplesText" destination="ZWv-It-3tj" id="Faq-bz-A7P"/>
+                        <outlet property="numberText" destination="VHn-LK-qL7" id="SPP-h0-AQM"/>
+                        <outlet property="playButton" destination="WBg-DZ-mgX" id="Kux-wY-yK5"/>
+                        <outlet property="textInput" destination="mka-dN-Kbm" id="y0I-hf-Oim"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
