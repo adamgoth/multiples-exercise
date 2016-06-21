@@ -35,11 +35,19 @@ class ViewController: UIViewController {
     
     
     @IBAction func pressAdd(sender: UIButton) {
-        numberText.text = "\(previousTotal) + \(addNumber) = \(previousTotal + addNumber)"
-        
         previousTotal = currentTotal
         currentTotal = addNumber + previousTotal
         
+        if currentTotal < 100 {
+        numberText.text = "\(previousTotal) + \(addNumber) = \(previousTotal + addNumber)"
+        } else {
+            textInput.hidden = false
+            playButton.hidden = false
+            addButton.hidden = true
+            numberText.hidden = true
+            
+            textInput.text = ""
+        }
     }
 }
 
